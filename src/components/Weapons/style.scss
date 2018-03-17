@@ -1,0 +1,54 @@
+@import '../../styles/_breakpoints.scss';
+.weapon-picker {
+    $width: 100px;
+    $height: 100px;
+    $phone-width: 70px;
+    $phone-height: 70px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    .weapon-btn {
+        min-height: $height;
+        margin-left: 25px !important;
+        animation: pulse 2s infinite;
+    }
+    .weapon-img {
+        width: $width;
+        height: $height;
+        transition: transform .2s ease-in-out;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    @media (max-width: $tablet) {
+        padding: 10px;
+        & {
+            .weapon-btn {
+                min-height: $phone-height;
+                margin-left: 10px !important;
+            }
+            .weapon-img {
+                width: $phone-width;
+                height: $phone-height;
+            }
+        }
+    }
+    @media (max-width: $phone) {
+        padding: 5px;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+}

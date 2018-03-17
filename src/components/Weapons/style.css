@@ -1,0 +1,37 @@
+.weapon-picker {
+  display: flex;
+  justify-content: center;
+  padding: 20px; }
+  .weapon-picker .weapon-btn {
+    min-height: 100px;
+    margin-left: 25px !important;
+    animation: pulse 2s infinite; }
+  .weapon-picker .weapon-img {
+    width: 100px;
+    height: 100px;
+    transition: transform .2s ease-in-out; }
+    .weapon-picker .weapon-img:hover {
+      transform: scale(1.05); }
+  @media (max-width: 768px) {
+    .weapon-picker {
+      padding: 10px; }
+      .weapon-picker .weapon-btn {
+        min-height: 70px;
+        margin-left: 10px !important; }
+      .weapon-picker .weapon-img {
+        width: 70px;
+        height: 70px; } }
+  @media (max-width: 480px) {
+    .weapon-picker {
+      padding: 5px; } }
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4); }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 10px rgba(204, 169, 44, 0); }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0); } }
