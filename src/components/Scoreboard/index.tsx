@@ -4,7 +4,7 @@ import { Player } from '../../state';
 import Score from './Score';
 import './style.css';
 
-interface Props {
+export interface Props {
     player: Player;
     opponent: Player;
     rounds: number;
@@ -22,8 +22,8 @@ const Scoreboard: React.SFC<Props> = ({ player, opponent, rounds }) => {
                 <span>Opponent: </span>
                 <Score score={opponent.score} lastPick={opponent.lastPick} />
             </div>
-            <p>Draws: {draws}</p>
-            <p>Rounds: {rounds}</p>
+            <p className="draws">Draws: <span>{draws}</span></p>
+            <p className="rounds">Rounds: <span>{rounds}</span></p>
         </div>
     );
 };

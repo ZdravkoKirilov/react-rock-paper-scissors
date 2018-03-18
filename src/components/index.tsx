@@ -24,7 +24,7 @@ const GameView: React.SFC<Props> = ({ onWeaponPick, onGameReset, status, player,
     return (
         <MuiThemeProvider>
             <main className="main-view">
-                <HeaderMenu onGameReset={onGameReset} />
+                <HeaderMenu onGameReset={onGameReset} title={'Rock - Paper - Scissors'} />
 
                 <WeaponPicker onWeaponPick={onWeaponPick} />
 
