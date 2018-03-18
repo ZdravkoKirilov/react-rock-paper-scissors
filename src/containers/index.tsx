@@ -40,7 +40,7 @@ export default class GameContainer extends React.Component<{}, State> {
         const newState = {
             ...initialState,
             player: { ...initialState.player },
-            computer: { ...initialState.opponent }
+            opponent: { ...initialState.opponent }
         };
         this.setState(prevState => newState);
     }

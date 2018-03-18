@@ -1,7 +1,8 @@
 import { WeaponType, Weapons } from './weapons';
 
+// return one of: ROCK / PAPER / SCISSORS
 export const getRandomWeapon = (weapons: Weapons): WeaponType => {
-    const options = Object.keys(weapons);
-    const option = options[Math.floor(Math.random() * options.length)];
-    return weapons[option];
+    const values = Object.values(weapons);
+    const option = values[Math.floor(Math.random() * values.length)];
+    return option;
 };

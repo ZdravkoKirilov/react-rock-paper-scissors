@@ -3,7 +3,7 @@ import * as React from 'react';
 import { ResultType } from '../../game-mechanics';
 import './style.css';
 
-interface Props {
+export interface Props {
     status: ResultType;
 }
 
@@ -13,10 +13,6 @@ const RoundStatus: React.SFC<Props> = ({ status }) => {
             <h1 className="background-sheet">{status}</h1>
         </div>
     );
-};
-
-RoundStatus.defaultProps = {
-    status: ''
 };
 
 export default RoundStatus;
